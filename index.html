@@ -43,60 +43,79 @@
           </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Dato ejemplo 1</td>
-                <td>Detalle del registro 1</td>
-                <td>
-                    <button type="button" class="btn btn-solid theme-warning btn-sm"><i class="bi bi-pencil"></i></button>
-                    <button type="button" class="btn btn-solid theme-danger btn-sm"><i class="bi bi-trash"></i></button>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Dato ejemplo 2</td>
-                <td>Detalle del registro 2</td>
-                <td>
-                    <button type="button" class="btn btn-solid theme-warning" btn-sm><i class="bi bi-pencil"></i></button>
-                    <button type="button" class="btn btn-solid theme-danger btn-sm"><i class="bi bi-trash"></i></button>
-                </td>
-            </tr>
+          <tr>
+            <td>1</td>
+            <td>Dato ejemplo 1</td>
+            <td>Detalle del registro 1</td>
+            <td>
+              <button type="button" class="btn btn-solid theme-warning btn-sm">
+                <i class="bi bi-pencil"></i>
+              </button>
+              <button type="button" class="btn btn-solid theme-danger btn-sm">
+                <i class="bi bi-trash"></i>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Dato ejemplo 2</td>
+            <td>Detalle del registro 2</td>
+            <td>
+              <button type="button" class="btn btn-solid theme-warning btn-sm">
+                <i class="bi bi-pencil"></i>
+              </button>
+              <button type="button" class="btn btn-solid theme-danger btn-sm">
+                <i class="bi bi-trash"></i>
+              </button>
+            </td>
+          </tr>
         </tbody>
       </table>
 
       <nav>
         <ul class="pagination justify-content-center">
-            <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="$">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+          <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
         </ul>
       </nav>
     </div>
 
     <dialog class="dialog" id="miDialog">
-        <div class="dialog-header">
-            <h5 class="dialog-title">Registro</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Cerrar"></button>
+      <div class="dialog-header">
+        <h5 class="dialog-title">Registro</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="dialog"
+          aria-label="Cerrar"
+        ></button>
+      </div>
+      <div class="dialog-body">
+        <div class="mb-3">
+          <label class="form-label">Campo 1</label>
+          <input type="text" class="form-control" placeholder="Ingrese dato" />
         </div>
-        <div class="dialog-body">
-            <div class="mb-3">
-                <label class="form-label">Campo 1</label>
-                <input type="text" class="form-control" placeholder="Ingrese dato">
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Campo 2</label>
-                <input type="text" class="form-control" placeholder="Ingrese dato">
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Campo 3</label>
-                <input type="text" class="form-control" placeholder="Ingrese dato">
-            </div>
+        <div class="mb-3">
+          <label class="form-label">Campo 2</label>
+          <input type="text" class="form-control" placeholder="Ingrese dato" />
         </div>
-        <div class="dialog-footer">
-            <button type="button" class="btn btn-solid theme-primary" data-bs-dismiss="dialog">OK</button>
+        <div class="mb-3">
+          <label class="form-label">Campo 3</label>
+          <input type="text" class="form-control" placeholder="Ingrese dato" />
         </div>
+      </div>
+      <div class="dialog-footer">
+        <button
+          type="button"
+          class="btn btn-solid theme-primary"
+          data-bs-dismiss="dialog"
+        >
+          OK
+        </button>
+      </div>
     </dialog>
 
     <script
