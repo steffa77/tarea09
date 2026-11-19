@@ -11,67 +11,248 @@
       integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe"
       crossorigin="anonymous"
     />
-
-    <link rel="stylesheet" href="https://cloudflare.com">
-
   </head>
   <body>
-    <nav class="navbar bg-dark mb-4" data-bs-theme="dark">
+    <nav class="navbar navbar-expand bg-dark mb-4" data-bs-theme="dark">
       <div class="container">
-        <span class="navbar-brand mb-0 h1">Sistema de Registro</span>
+        <a class="navbar-brand" href="#">Inventario de Productos</a>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Reportes</a>
+          </li>
+        </ul>
       </div>
     </nav>
 
     <div class="container">
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <h3>Lista de Datos</h3>
-        <button
-          type="button"
-          class="btn btn-solid theme-primary"
-          data-bs-toggle="dialog"
-          data-bs-target="#miDialog"
-        >
-          <i class="bi bi-plus-lg"></i>
-        </button>
+      <div class="d-flex justify-content-between align-items-center mb-3 gap-2">
+        <h3 class="mb-0">Lista de Productos</h3>
+        <div class="d-flex gap-2">
+          <input
+            type="search"
+            class="form-control"
+            placeholder="Buscar producto..."
+          />
+          <button
+            type="button"
+            class="btn btn-solid theme-primary"
+            data-bs-toggle="dialog"
+            data-bs-target="#miDialog"
+            title="Nuevo registro"
+          >
+            <svg
+              xmlns="https://we.org"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
-      <table class="table table-bordered table-hover align-middle">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Operaciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Dato ejemplo 1</td>
-            <td>Detalle del registro 1</td>
-            <td>
-              <button type="button" class="btn btn-solid theme-warning btn-sm">
-                <i class="bi bi-pencil"></i>
-              </button>
-              <button type="button" class="btn btn-solid theme-danger btn-sm">
-                <i class="bi bi-trash"></i>
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Dato ejemplo 2</td>
-            <td>Detalle del registro 2</td>
-            <td>
-              <button type="button" class="btn btn-solid theme-warning btn-sm">
-                <i class="bi bi-pencil"></i>
-              </button>
-              <button type="button" class="btn btn-solid theme-danger btn-sm">
-                <i class="bi bi-trash"></i>
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover align-middle">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Productos</th>
+              <th>Categoría</th>
+              <th>Precio</th>
+              <th>Operaciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Laptop HP 15</td>
+              <td>Computadoras</td>
+              <td>S/ 2,500</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-solid theme-warning btn-sm"
+                  title="Editar"
+                >
+                  <svg
+                    xmlns="http://w3.org"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325"
+                    />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-solid theme-danger btn-sm"
+                  title="Eliminar"
+                >
+                  <svg
+                    xmlns="http://w3.org"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"
+                    />
+                    <path
+                      d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Mouse Inalámbrico</td>
+              <td>Accesorios</td>
+              <td>S/ 45</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-solid theme-warning btn-sm"
+                  title="Editar"
+                >
+                  <svg
+                    xmlns="http://w3.org"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325"
+                    />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-solid theme-danger btn-sm"
+                  title="Eliminar"
+                >
+                  <svg
+                    xmlns="http://w3.org"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"
+                    />
+                    <path
+                      d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Teclado Mecánico</td>
+              <td>Accesorios</td>
+              <td>S/ 120</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-solid theme-warning btn-sm"
+                  title="Editar"
+                >
+                  <svg
+                    xmlns="http://w3.org"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325"
+                    />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-solid theme-danger btn-sm"
+                  title="Eliminar"
+                >
+                  <svg
+                    xmlns="http://w3.org"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"
+                    />
+                    <path
+                      d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Monitor 24</td>
+              <td>Pantallas</td>
+              <td>S/ 580</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-solid theme-warning btn-sm"
+                  title="Editar"
+                >
+                  <svg
+                    xmlns="http://w3.org"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325"
+                    />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-solid theme-danger btn-sm"
+                  title="Eliminar"
+                >
+                  <svg
+                    xmlns="http://w3.org"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"
+                    />
+                    <path
+                      d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <nav>
         <ul class="pagination justify-content-center">
@@ -96,16 +277,25 @@
       </div>
       <div class="dialog-body">
         <div class="mb-3">
-          <label class="form-label">Campo 1</label>
-          <input type="text" class="form-control" placeholder="Ingrese dato" />
+          <label class="form-label">Nombre del Producto</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Ej. Audífonos Bluetooth"
+          />
         </div>
         <div class="mb-3">
-          <label class="form-label">Campo 2</label>
-          <input type="text" class="form-control" placeholder="Ingrese dato" />
+          <label class="form-label">Categoría</label>
+          <select class="form-control">
+            <option selected>Seleccione una categoría...</option>
+            <option>Computadoras</option>
+            <option>Accesorios</option>
+            <option>Pantallas</option>
+          </select>
         </div>
         <div class="mb-3">
-          <label class="form-label">Campo 3</label>
-          <input type="text" class="form-control" placeholder="Ingrese dato" />
+          <label class="form-label">Precio (S/)</label>
+          <input type="number" class="form-control" placeholder="Ej. 85.00" />
         </div>
       </div>
       <div class="dialog-footer">
@@ -116,6 +306,13 @@
         >
           OK
         </button>
+      </div>
+    </dialog>
+
+    <dialog class="dialog" id="dialogEditar">
+      <div class="dialog-header">
+        <h5 class="dialog-title">Editar Producto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Cerrar"></button>
       </div>
     </dialog>
 
