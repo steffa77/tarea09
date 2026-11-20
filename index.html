@@ -78,7 +78,7 @@
               <td>
                 <button
                   type="button"
-                  class="btn btn-solid theme-warning btn-sm"
+                  class="btn btn-solid theme-warning btn-sm" data-bs-toggle="dialog" data-bs-target="#dialogeditar" data-bs-toggle="dialog" data-bs-target="#dialogeditar"
                   title="Editar"
                 >
                   <svg
@@ -95,7 +95,7 @@
                 </button>
                 <button
                   type="button"
-                  class="btn btn-solid theme-danger btn-sm"
+                  class="btn btn-solid theme-danger btn-sm" data-bs-toggle="dialog" data-bs-target="#dialogeliminar"
                   title="Eliminar"
                 >
                   <svg
@@ -123,7 +123,7 @@
               <td>
                 <button
                   type="button"
-                  class="btn btn-solid theme-warning btn-sm"
+                  class="btn btn-solid theme-warning btn-sm" data-bs-toggle="dialog" data-bs-target="#dialogeditar"
                   title="Editar"
                 >
                   <svg
@@ -140,7 +140,7 @@
                 </button>
                 <button
                   type="button"
-                  class="btn btn-solid theme-danger btn-sm"
+                  class="btn btn-solid theme-danger btn-sm" data-bs-toggle="dialog" data-bs-target="#dialogeliminar"
                   title="Eliminar"
                 >
                   <svg
@@ -168,7 +168,7 @@
               <td>
                 <button
                   type="button"
-                  class="btn btn-solid theme-warning btn-sm"
+                  class="btn btn-solid theme-warning btn-sm" data-bs-toggle="dialog" data-bs-target="#dialogeditar"
                   title="Editar"
                 >
                   <svg
@@ -185,7 +185,7 @@
                 </button>
                 <button
                   type="button"
-                  class="btn btn-solid theme-danger btn-sm"
+                  class="btn btn-solid theme-danger btn-sm" data-bs-toggle="dialog" data-bs-target="#dialogeliminar"
                   title="Eliminar"
                 >
                   <svg
@@ -213,7 +213,7 @@
               <td>
                 <button
                   type="button"
-                  class="btn btn-solid theme-warning btn-sm"
+                  class="btn btn-solid theme-warning btn-sm" data-bs-toggle="dialog" data-bs-target="#dialogeditar"
                   title="Editar"
                 >
                   <svg
@@ -230,7 +230,7 @@
                 </button>
                 <button
                   type="button"
-                  class="btn btn-solid theme-danger btn-sm"
+                  class="btn btn-solid theme-danger btn-sm" data-bs-toggle="dialog" data-bs-target="#dialogeliminar"
                   title="Eliminar"
                 >
                   <svg
@@ -313,6 +313,28 @@
       <div class="dialog-header">
         <h5 class="dialog-title">Editar Producto</h5>
         <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Cerrar"></button>
+      </div>
+      <div class="dialog-body">
+        <div class="mb-3">
+          <label class="form-label">Nombre del Producto</label>
+          <input type="text" class="form-control" value="Laptop HP 15" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Categoría</label>
+          <select class="form-control">
+            <option selected>Computadoras</option>
+            <option>Accesorios</option>
+            <option>Pantallas</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Precio (S/)</label>
+          <input type="number" class="form-control" value="2500" />
+        </div>
+      </div>
+      <div class="dialog-footer">
+        <button type="button" class="btn btn-outline theme-secondary" data-bs-dismiss="dialog">Cancelar</button>
+        <button type="button" class="btn btn-solid theme-warning" data-bs-dismiss="dialog">Guardar Cambios</button>
       </div>
     </dialog>
 
